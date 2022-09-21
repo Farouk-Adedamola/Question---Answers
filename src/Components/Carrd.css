@@ -1,20 +1,17 @@
 .child-container {
   display: flex;
-  width: 400px;
-  justify-content: space-between;
+  width: 85vw;
   flex-direction: column;
   margin: 15px auto;
   background-color: #fff;
   border-radius: 4px;
-  padding: 10px 0;
-
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
+
 .contain {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  /* padding: 0 10px; */
   width: 80%;
   align-items: center;
 }
@@ -33,9 +30,10 @@
   color: #4b145b;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 760px) {
   .child-container {
-    width: 550px;
+    width: 40vw;
+    margin-right: 2rem;
   }
 }
 

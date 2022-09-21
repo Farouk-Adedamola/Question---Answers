@@ -4,7 +4,7 @@
   display: flex;
   flex-direction: column;
   margin: 2rem auto;
-  width: 450px;
+  width: 90vw;
 }
 
 @media screen and (max-width: 450px) {
@@ -15,11 +15,18 @@
 
 .data-head-text {
   text-align: center;
+  padding: 0 0.7rem;
+  grid-area: "d";
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 760px) {
   .data-container {
-    width: 580px;
+    width: 75vw;
+  }
+  .data-head-text {
+    font-size: 1.3rem;
+    display: flex;
+    margin: 3.3rem 0 0 0;
   }
 }
 
@@ -34,6 +41,21 @@
     width: 350px;
   }
 }
+@media screen and (min-width: 760px) {
+  .wrap-container {
+    display: grid;
+    place-items: start;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "d h"
+      "d h"
+      "f f";
+  }
+}
+
+.data {
+  grid-area: "h";
+}
 
 .btn-cont {
   display: flex;
@@ -41,19 +63,46 @@
   align-items: center;
 }
 
+.carrd {
+  margin: 2rem auto;
+}
+
 .button {
   margin: 3rem 0;
-  color: #000;
-  background: #234679;
+  color: #fff;
+  background: #06020d;
   border: none;
   border-radius: 7px;
   padding: 5px 9px;
   font-weight: bold;
+  grid-area: "f";
 }
 
-.button:hover {
-  color: #234679;
-  background-color: #d9e2ec;
+@media screen and (min-width: 910px) {
+  .btn-cont {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    left: 20vw;
+    margin-bottom: 1rem;
+  }
+
+  .button {
+    margin: 0 auto 1rem auto;
+  }
+  .data-head-text {
+    margin: 3.3rem 0 0 0;
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 760px) {
+  .btn-cont {
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .button2 {
@@ -64,7 +113,4 @@
   padding: 5px 9px;
   font-weight: bold;
   margin: 3rem 0;
-}
-
-.Arrow2 {
 }
